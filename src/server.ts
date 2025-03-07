@@ -5,10 +5,13 @@ import adminRoutes from "./routes/adminRoutes";
 import employeeRoutes from "./routes/employeeRoutes"
 import payrollRoutes from "./routes/payrollRoutes"
 
+
+
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+
 
 AppDataSource.initialize()
   .then(() => {
@@ -23,6 +26,8 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/payroll", payrollRoutes);
 
+
+app.use("/api/employee",employeeRoutes);
 
 
 
