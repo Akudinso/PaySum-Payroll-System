@@ -1,6 +1,9 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
+import { Admin } from "../models/Admin";
+import { Employee } from "../models/employee";
+import { Payroll } from "../models/payroll";
 
 dotenv.config();
 
@@ -9,7 +12,7 @@ export const AppDataSource = new DataSource({
   url: process.env.DATABASE_URL,
   synchronize: false, // Set to false in production and use migrations instead
   logging: false,
-  entities: [process.env.NODE_ENV === "production" ? "dist/models/*.js" : "src/models/*.ts"], 
+  entities: [Admin, Employee, Payroll],
   migrations: [process.env.NODE_ENV === "production" ? "dist/migrations/*.js" : "src/migrations/*.ts"],
   migrationsTableName: "migrations",
   extra: {
