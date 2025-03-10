@@ -1,4 +1,4 @@
-import { Admin } from "../models/Admin";
+import { Admin } from "../models/admin";
 import { AppDataSource } from "../config/data-source";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";

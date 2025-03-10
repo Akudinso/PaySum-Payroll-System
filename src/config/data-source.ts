@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
-import { Admin } from "../models/Admin";
+import { Admin } from "../models/admin";
 import { Employee } from "../models/employee";
 import { Payroll } from "../models/payroll";
 

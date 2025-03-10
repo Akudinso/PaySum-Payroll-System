@@ -1,6 +1,6 @@
 import { Employee } from "../models/employee";
 import { AppDataSource } from "../config/data-source";
-import { Admin } from "../models/Admin";
+import { Admin } from "../models/admin";
 import { NotFoundError, UnauthorizedError } from "../utils/error";
 
 const employeeRepository = AppDataSource.getRepository(Employee);
